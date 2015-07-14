@@ -1,4 +1,4 @@
-cloned-stack
+question-and-answer
 ============
 
 This is my attempt to create a clone of stackoverflow in a working sense hosted on github pages.
@@ -26,3 +26,5 @@ When complete, the application should have all the same functionality that stack
 * You may use any architecture and design patterns
 * The user interface must have the look and feel of a Blizzard web site
 * Provide justification for your choices with your submission -->
+
+<!-- this site will be using json files for the purposes of demonstration but will contain a db install script for use on other machines. -->
