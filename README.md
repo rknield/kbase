@@ -6,17 +6,17 @@ When complete, the application should have all the same functionality that stack
 
 ####Non authenticated users should be able to
 
-*Search for questions
-*Results should be sortable
-*View question answers
-*View the tag cloud
-*Authenticate
+* Search for questions
+* Results should be sortable
+* View question answers
+* View the tag cloud
+* Authenticate
 
 ####Authenticated users should be able to
 
-*View own profile
-*View own Badges
-*View own favorites
-*View own answers
-*Upvote, downvote and favorite answers and questions
-*Log out
+* View own profile
+* View own Badges
+* View own favorites
+* View own answers
+* Upvote, downvote and favorite answers and questions
+* Log out
