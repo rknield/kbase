@@ -1,0 +1,91 @@
+@import "colors.less";
+
+//*--------------------------*/
+//*      Std. CSS Reset      */
+//*--------------------------*/
+html,body { margin: 0; border: 0; padding: 0; }
+html {
+	font-size:62.5%;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	
+	//for proper box-model behavior
+	box-sizing: border-box;
+}
+
+//for proper box-model behavior
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+	background-color: @background-color;
+}
+
+//*--------------------------*/
+//*          Header          */
+//*--------------------------*/
+
+.header { 
+
+}
+
+//*--------------------------*/
+//*         ./Header         */
+//*--------------------------*/
+
+
+//*--------------------------*/
+//*       Main Content       */
+//*--------------------------*/
+.main-wrapper {
+	
+}
+//*--------------------------*/
+//*      ./Main Content      */
+//*--------------------------*/
+
+
+//*--------------------------*/
+//*          Footer          */
+//*--------------------------*/
+.footer {
+	
+}
+//*--------------------------*/
+//*         ./Footer         */
+//*--------------------------*/
+
+
+
+///* */
+// -- try not to edit below here if possible.
+///* */
+//*--------------------------*/
+//*     Blizzard Styles      */
+//*--------------------------*/
+// these are styles taken from the blizzard website to make
+// the app im building appear to be from the blizzard website
+
+
+
+//*--------------------------*/
+//*    ./Blizzard Styles     */
+//*--------------------------*/
+
+
+//*--------------------------*/
+//*          Mixins          */
+//*--------------------------*/
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+.box {
+  color: saturate(@shadow-base, 5%);
+  border-color: lighten(@shadow-base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
