@@ -1,3 +1,3 @@
 (function(){
-	console.log("Welcome Stranger.");
+	console.log("Global Initialization");
 })();
