@@ -12,6 +12,7 @@
 		<!-- scripts -->
 		<link rel="stylesheet" type="text/css" href="css/site.css?v1" />
 		<link rel="stylesheet" type="text/css" href="required/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<!-- ./scripts -->
 		
 		<!-- scripts -->
@@ -21,52 +22,7 @@
 		
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
-		<!-- ./scripts -->
-		
-		<script type='text/javascript'>
-			// For simplicity, we're using jQuery for some things
-			//   However, the library has no jQuery dependency
-			$(function(){
-				// Initialize library
-				SE.init({
-					// Parameters obtained by registering an app, these are specific to the SE
-					// documentation site
-					clientId: 5217, 
-					key: 'y76OQ0Zb2dDMfWA)uhy)oQ((', 
-					
-					// Used for cross domain communication, it will be validated
-					channelUrl: 'http://github.io/rknield/kbase/blank.html',
-					
-					// Called when all initialization is finished
-					complete: function(data) { 
-						$('#login-button')
-							.removeAttr('disabled')
-							.text('Login'); 
-					}
-				});
-				
-				// Attach click handler to login button
-				$('#login-button').click(function() {
-		
-					// Make the authentication call, note that being in an onclick handler
-					//   is important; most browsers will hide windows opened without a
-					//   'click blessing'
-					SE.authenticate({
-						success: function(data) { 
-							alert(
-								'User Authorized with account id = ' + 
-								data.networkUsers[0].account_id + ', got access token = ' + 
-								data.accessToken
-							); 
-						},
-						error: function(data) { 
-							alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
-						},
-						networkUsers: true
-					});
-				});
-			});
-		</script>
+		<!-- ./scripts -->		
 	</head>
 
 	<body class="stack-flow">
@@ -110,17 +66,43 @@
 			</div>
 		</nav>
 		
+		<style>
+			.plain-view {
+				display: inline-block;
+				font-size: 1.1rem;
+				line-height: 1.0rem;
+				text-transform: uppercase;
+			}
+			
+			.plain-view * {
+				display: inline-block;
+				vertical-align:bottom;
+			}
+		</style>
+		
 		<div class="container" style="margin-top:75px;">
 			<div class="row">
 				<div class="col-xs-12">
-					<form method="post" action="https://stackexchange.com/oauth" class="horizontal">
+					<form class="col-xs-4 form-horizontal" role="form" method="post" action="https://stackexchange.com/oauth">
 						<div class="form-group">
-							<label for="userid">Username:</label>
-							<input type="text" name="username" />
+							<label class="control-label col-xs-3" for="email">Username:</label>
+							<div class="col-xs-9 input-group">
+								<input type="text" class="form-control" id="uname" name="uname" placeholder="Username">
+								<div class="input-group-addon"><span class="fa fa-asterisk"></span></div>
+							</div>
 						</div>
 						<div class="form-group">
-							<label for="userid">Password:</label>
-							<input type="text" name="password" />
+							<label class="control-label col-xs-3" for="email">Password:</label>
+							<div class="col-xs-9 input-group">
+								<input type="password" class="form-control" id="pword" name="pword" placeholder="Password">
+								<div class="input-group-addon"><span class="fa fa-asterisk"></span></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-3"></div>
+							<div class="col-xs-9">
+								<span class="plain-view"><input type="checkbox" />&nbsp;Show password as plain text</span>
+							</div>
 						</div>
 						<div class="form-group">
 							<button id="login-button">Login</button>
