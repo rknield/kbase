@@ -1,7 +1,22 @@
-#KBase
+#question-and-answer
 
-This is my attempt to create a sort-of searchable knowledgebase using various styles and technologies from around the web.
+This is my attempt to create a clone of stackoverflow in a working sense hosted on github pages.
 
-This knowledgebase will allow users of Blizzard video games to act similar to the community on stack overflow, and ask questions regarding to the various games and receieve community answers
+When complete, the application should have all the same functionality that stackoverflow.com has, with the exception of styling.
 
+####Non authenticated users should be able to
 
+* Search for questions
+* Results should be sortable
+* View question answers
+* View the tag cloud
+* Authenticate
+
+####Authenticated users should be able to
+
+* View own profile
+* View own Badges
+* View own favorites
+* View own answers
+* Upvote, downvote and favorite answers and questions
+* Log out
