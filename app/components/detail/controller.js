@@ -1,4 +1,4 @@
-angular.module('kBase', ['ui.bootstrap','ngAnimate','ngSanitize']).controller('AnswerCtrl', ['$scope','$routeParams','$http','$sce', function ($scope, $routeParams, $http, $sce) {
+angular.module('kBase', ['ngSanitize']).controller('AnswerCtrl', ['$scope','$routeParams','$http','$sce', function ($scope, $routeParams, $http, $sce) {
 		var questionid = $routeParams.questionID;
 	
 		$http.get('http://www.ft-wd.com/kbaseConn/kbase.php?r=qa&qid=' + questionid)

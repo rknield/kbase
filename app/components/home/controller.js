@@ -1,4 +1,4 @@
-angular.module('kBase',['ui.bootstrap','ngAnimate']).controller('MainCtrl', function ($scope, $http) {
+angular.module('kBase').controller('MainCtrl', function ($scope, $http) {
 	//this queries to get the list of questions
 	$http.get('http://www.ft-wd.com/kbaseConn/kbase.php?r=q')
 		 .success(function(response){

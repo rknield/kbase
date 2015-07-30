@@ -1,6 +1,6 @@
 "use strict";
 angular.module('kBase', ['ngRoute']);
 
-angular.module('kBase').controller('CollapseCtrl', function ($scope) {
+angular.module('kBase', ['ui.bootstrap','ngAnimate']).controller('CollapseCtrl',['$scope','$routeParams','$http','$sce', function ($scope) {
 	$scope.isCollapsed = true;
-});
+}]);
