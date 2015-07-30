@@ -1,4 +1,4 @@
-angular.module('kbase').controller('AnswerCtrl', [$sce, function ($scope, $routeParams, $http, $sce) {
+angular.module('kbase').controller('AnswerCtrl', ['$sce', function ($scope, $routeParams, $http, $sce) {
 		var questionid = $routeParams.questionID;
 	
 		$http.get('http://www.ft-wd.com/kbaseConn/kbase.php?r=qa&qid=' + questionid)
@@ -13,6 +13,6 @@ angular.module('kbase').controller('AnswerCtrl', [$sce, function ($scope, $route
 		$scope.questions.question.body = $sce.trustAsHtml(questions.question.body);
 		$scope.questions.answer.body = $sce.trustAsHtml(questions.answer.body);
 
-		//console.log($scope.questions);
+		//console.log($scope.questions); 
 	}
 ]);
