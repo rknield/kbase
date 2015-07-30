@@ -5,7 +5,7 @@
 		<h3>{{question.asked}}</h3>
 		<div ng-bind-html="'{{question.body}}' | to_trusted"></div>
 	</div>
-	<div class="answer-count">0 Answers</div>
+	<div class="answer-count">0 Answers</div>   
 	<div ng-repeat="answer in answers">
 		<p class="ans-votes">0</p>
 		<div ng-bind-html="'{{answer.body}}' | to_trusted"></div>
