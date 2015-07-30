@@ -10,8 +10,8 @@ angular.module('kbase').controller('AnswerCtrl', ['$scope','$routeParams','$http
 				console.log("there was an error"); 
 			 });
 
-		$scope.questions.question.body = $sce.trustAsHtml(questions.question.body);
-		$scope.questions.answer.body = $sce.trustAsHtml(questions.answer.body);
+		$scope.questions.question.body = $sce.trustAsHtml($scope.questions.question.body);
+		$scope.questions.answer.body = $sce.trustAsHtml($scope.questions.answer.body);
 
 		//console.log($scope.questions); 
 	}
