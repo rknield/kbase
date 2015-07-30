@@ -15,10 +15,15 @@
 			</div>
 		</div>
 		<div class="col-xs-9 question">
-			<p class="question-text"><a href="#/question/{{question.questionid}}">{{question.asked}}</a></p>
-			<p class="tag">
-				<span ng-repeat="tag in question.tags track by $index">{{question.tag}}</span>
-			</p>
+			<div class="row">
+				<p class="col-xs-12 question-text"><a href="#/question/{{question.questionid}}">{{question.asked}}</a></p>
+				<p class="col-xs-6 tag">
+					<span ng-repeat="tag in question.tags track by $index">{{question.tag}}</span>
+				</p>
+				<p class="col-xs-6 user-id">
+					<span>Asked by: {{question.userid}}</span>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
