@@ -118,6 +118,23 @@ ul.nav {
 	}
 }
 
+ul.nav-tabs li {
+	background-color: #ddd;
+	color: #fff;	
+	
+	a {
+		color: #bbb;
+	}
+	
+	&.active {
+		background-color: #fff;
+		
+		a {
+			color: #333;
+		}
+	}
+}
+
 @media (min-width: @screen-sm-min) { 
 	ul.nav {
 		li {
@@ -219,22 +236,18 @@ h1.container-fluid {
 	padding-right: 0;
 }
 
-ul.nav-tabs li {
-	background-color: #ddd;
-	color: #fff;	
-	
-	a {
-		color: #bbb;
-	}
-	
-	&.active {
-		background-color: #fff;
-		
-		a {
-			color: #333;
-		}
-	}
+.answer-count {
+	margin-bottom: 3.0rem;
+	border-width: .1rem 0;
+    border-style: solid;
+    border-color: rgba(32,169,255,0.2);
+	padding: 5.0rem 0;
+	font: normal 1.8rem "MuseoSans-500", "century gothic", arial;
+	text-transform: uppercase;
+    color: #fff;
+    background: url('../../_images/company/careers/layout/roles-sectionheader-bg.png') no-repeat center bottom;
 }
+
 //*--------------------------*/
 //*      ./Main Content      */
 //*--------------------------*/
