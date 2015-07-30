@@ -5,6 +5,7 @@
 		<div class="col-xs-12" ng-repeat="question in questions">
 			<h3>{{question.asked}}</h3>
 			<div ng-bind-html="question.body"></div>
+			<p class="pull-right">Asked on: {{ question.askedon | date:'MM/dd/yyyy @ h:mma' }} by: {{question.userid}}</p>
 		</div>
 	</div>
 	<div class="row clearfix">
@@ -18,7 +19,7 @@
 					<div ng-bind-html="item.answer"></div>
 				</div>
 			</div>
-			<div class="row no-gutters section-divider">
+			<div class="row no-gutters section-divider">s
 				<div class="col-xs-12"></div>
 			</div>
 		</div>
