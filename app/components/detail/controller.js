@@ -4,7 +4,10 @@ angular.module('kbase').controller('AnswerCtrl', ['$scope','$routeParams','$http
 		$http.get('http://www.ft-wd.com/kbaseConn/kbase.php?r=qa&qid=' + questionid)
 			 .success(function(response){
 				$scope.questions = response.questions;
+				$scope.answers = response.answers;
+				
 				console.log(response.questions);
+				console.log(response.answers);
 			 })
 			 .error(function(data,status,headers,config){
 				console.log("there was an error"); 

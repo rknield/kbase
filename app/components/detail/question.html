@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	<div class="row clearfix">
-		<div class="answer-count col-xs-12">0 Answers</div>
+		<div class="answer-count col-xs-12">{{count}} Answers</div>
 	</div>
 	<div class="row clearfix">
 		<div class="col-xs-12" ng-repeat="answer in answers">
@@ -16,7 +16,13 @@
 			<div ng-bind-html="answer.body"></div>
 		</div>
 	</div>
+	<!--div class="row section-divider">
+		<div class="col-xs-12"></div>
+	</div>
 	<!--form class="answer-form">
 		<h4>Your Answer</h4>
 	</form-->
+	<div class="row section-divider">
+			<div class="col-xs-12"></div>
+	</div>
 </div>
