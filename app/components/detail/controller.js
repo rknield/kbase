@@ -9,6 +9,10 @@ angular.module('kbase').controller('AnswerCtrl', function ($scope, $routeParams,
 			 .error(function(data,status,headers,config){
 				console.log("there was an error"); 
 			 });
+
+		$scope.getContent = function(obj){
+			return obj.value + " " + obj.text;
+	}
 		 
 		//console.log($scope.questions);
 	}

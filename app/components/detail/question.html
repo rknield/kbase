@@ -1,16 +1,14 @@
 <div class="col-xs-12">
 	<a href="#/" class="back-link">&lt; Back to Questions</a>
 
-	<div ng-repeat="question in questions">
-		<h3>{{question.asked}}</h3>
+	<div ng-repeat="question in questions" ng-bind-html-unsafe="getContent(question)">
+		<h2>{{question.asked}}</h2>
 		<p>{{question.body}}</p>
 	</div>
 	<div class="answer-count">0 Answers</div>
-	<div ng-repeat="answer in answers">
+	<div ng-repeat="answer in answers" ng-bind-html-unsafe="getContent(answer)">
 		<p class="ans-votes">0</p>
-		<div ng-bind-html="bind-html-with-sanitize">
-			{{answer.body}}
-		</div>
+		<div>{{answer.body}}</div>
 	</div>
 	<form class="answer-form">
 		<h3>Your Answer</h3>
