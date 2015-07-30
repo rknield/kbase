@@ -166,9 +166,11 @@ ul.nav-tabs li {
 	}
 }
 
-h1.container-fluid {
+h1.container-fluid.no-pad {
 	margin-top:70px;
 	margin-bottom: 0;
+	background: url("../b-res/images/header.jpg") no-repeat center top;
+	background-size: cover;
 }
 
 .kbase {
@@ -264,6 +266,37 @@ h3 {
     color: #fff;
     background: url('../b-res/images/roles-sectionheader-bg.png') no-repeat center bottom;
 }
+
+@media screen and (min-width: @screen-lg-min){
+	h1.container-fluid.no-pad {
+		height: 18.0rem;
+	}
+}
+
+@media screen and (min-width: @screen-md-min){
+	h1.container-fluid.no-pad {
+		height: 13.1rem;
+	}
+}
+
+@media screen and (min-width: @screen-sm-min){
+	h1.container-fluid.no-pad {
+		height: 10.2rem;
+	}
+}
+
+@media screen and (min-width: @screen-xs-min){
+	h1.container-fluid.no-pad {
+		height: 8.0rem;
+	}
+}
+
+@media screen and (max-width: @screen-xs-min){
+	h1.container-fluid.no-pad {
+		height: 4.8rem;
+	}
+}
+
 
 //*--------------------------*/
 //*      ./Main Content      */
@@ -363,7 +396,7 @@ h3 {
 	}
 }
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+@media (max-width: @screen-sm-max) {
 	.kbase .subpagenav .middle {
 		background: none;
 
@@ -379,6 +412,11 @@ h3 {
 	}
 }
 
+@media (max-width: @screen-sm-min) {
+	.kbase .subpagenav .middle div.columns ul li {
+		width: 26%
+	}
+}
 //*--------------------------*/
 //*      ./Subpage Navi      */
 //*--------------------------*/
