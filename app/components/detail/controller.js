@@ -15,4 +15,4 @@ angular.module('kbase').controller('AnswerCtrl', [$sce, function ($scope, $route
 
 		//console.log($scope.questions);
 	}
-);
+]);
