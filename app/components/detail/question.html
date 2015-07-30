@@ -11,9 +11,9 @@
 		<div class="answer-count col-xs-12">{{count}} Answers</div>
 	</div>
 	<div class="row clearfix">
-		<div class="col-xs-12" ng-repeat="answer in answers">
+		<div class="col-xs-12" ng-repeat="item in answers">
 			<!--p class="ans-votes">0</p-->
-			<div ng-bind-html="answer.answer"></div>
+			<div ng-bind-html="item.answer"></div>
 		</div>
 	</div>
 	<!--div class="row section-divider">
