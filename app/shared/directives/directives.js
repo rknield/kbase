@@ -1,4 +1,4 @@
-angular.module('kBase').filter('to_trusted', ['$sce', function($sce){
+angular.module('kbase').filter('to_trusted', ['$sce', function($sce){
 	return function(text) {
 		return $sce.trustAsHtml(text); 
 	};	

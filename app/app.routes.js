@@ -1,4 +1,4 @@
-angular.module('kBase').config(['$routeProvider',
+angular.module('kbase').config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider
 		.when('/', {
