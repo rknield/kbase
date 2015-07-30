@@ -74,12 +74,12 @@
 								<a href="http://us.blizzard.com/store/index.xml?locale=en_US" class="navstore" id="shop-mainnav"><span>SHOP</span></a>
 							</li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
+						<!--ul class="nav navbar-nav navbar-right">
 							<li class="nav-item login">
-								<!-- https://stackexchange.com/oauth?client_id=&scope=&redirect_uri& -->
+								<!-- https://stackexchange.com/oauth?client_id=&scope=&redirect_uri& ->
 								<a href="#"><span>Login</span></a>
 							</li>
-						</ul>
+						</ul-->
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
@@ -98,12 +98,8 @@
 						<h2>kBase</h2>
 					</div>
 				</div>
-				<div class="row wrapper no-gutters">
-					<div class="col-xs-12 col-md-7" ng-view></div>
-					<!--div class="col-sm-12 col-md-5 wcloud" style="border:1px dotted red">
-						This is where the word cloud goes
-					</div-->
-				</div>
+				<!-- this is where the magic happens -->
+				<div class="row wrapper no-gutters" ng-view></div>
 			</div>
 			
 			<div class="subpagenav container">
