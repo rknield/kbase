@@ -1,0 +1,22 @@
+<div class="row entry no-gutters" ng-repeat="question in questions">
+	<div class="col-xs-3 counts">
+		<div class="votes box-sm">
+			<p class="result">{{question.votes}}</p>
+			<p class="desc">votes</p>
+		</div>
+		<div class="answers box-sm">
+			<p class="result">{{question.answers}}</p>
+			<p class="desc">answers</p>
+		</div>
+		<div class="views box-sm">
+			<p class="result">{{question.views}}</p>
+			<p class="desc">views</p>
+		</div>
+	</div>
+	<div class="col-xs-9 question">
+		<p class="question-text"><a href="/#/question/{{question.questionid}}">{{question.asked}}</a></p>
+		<p class="tag">
+			<span ng-repeat="tag in question.tags track by $index">{{question.tag}}</span>
+		</p>
+	</div>
+</div>
