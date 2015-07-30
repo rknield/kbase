@@ -10,10 +10,10 @@ angular.module('kbase').controller('AnswerCtrl', function ($scope, $routeParams,
 				console.log("there was an error"); 
 			 });
 
-		$scope.getContent = function(obj){
-			return obj.value + " " + obj.text;
-	}
-		 
+		$scope.question.body.embed.htmlSafe = 
+			$sce.trustAsHtml(question.body.embed.html);
+		}
+
 		//console.log($scope.questions);
 	}
 );
