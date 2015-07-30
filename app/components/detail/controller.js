@@ -6,6 +6,8 @@ angular.module('kbase').controller('AnswerCtrl', ['$scope','$routeParams','$http
 				$scope.questions = response.questions;
 				$scope.answers = response.answers;
 				
+				$scope.count = $scope.answers.length;
+
 				console.log(response.questions);
 				console.log(response.answers);
 			 })
