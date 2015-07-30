@@ -2,14 +2,14 @@
 	<a href="#/" class="back-link">&lt; Back to Questions</a>
 
 	<div ng-repeat="question in questions">
-		<h2>{{question.asked}}</h2>
+		<h3>{{question.asked}}</h3>
 		<p>{{question.body}}</p>
 	</div>
 	<hr />
 	<div class="answer-count">0 Answers</div>
 	<div ng-repeat="answer in answers">
 		<p class="ans-votes">0</p>
-		<div ng:bind="customHtml">
+		<div ng-bind="bind-html-with-sanitize">
 			{{answer.body}}
 		</div>
 	</div>
