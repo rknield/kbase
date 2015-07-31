@@ -6,6 +6,3 @@ angular.module('kbase')
 	        }, 1);
 	    };
 	})
-	.directive('updateView', function($http){
-		
-	})
