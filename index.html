@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<base href="/kbase/" target="_blank">
+		<meta charset="utf-8">	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>kBase :: Community Question and Answer</title>
+		
+		<!-- stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/site.css?v1" />
+		<link rel="stylesheet" type="text/css" href="required/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="required/bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!-- ./stylesheet -->
+		
+		<!-- scripts -->
+		<script type="text/javascript" src="required/angular.js/angular.min.js"></script>
+		<script type="text/javascript" src="required/angular.js/angular-route.min.js"></script>
+		<script type="text/javascript" src="required/angular.js/angular-resource.min.js"></script>
+		<script type="text/javascript" src="required/angular.js/angular-animate.min.js"></script>
+		<script type="text/javascript" src="required/angular.js/angular-touch.min.js"></script>
+		<script type="text/javascript" src="required/angular.js/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="required/bootstrap/js/ui-bootstrap-custom-0.13.1.min.js"></script>	
+		<script type="text/javascript" src="required/bootstrap/js/ui-bootstrap-custom-tpls-0.13.1.min.js"></script>
+		
+		<!-- stack exchange api -->
+		<script type="text/javascript" src="https://api.stackexchange.com/js/2.0/all.js"></script>
+		
+		<!-- app -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/app.routes.js"></script>
+		<script type="text/javascript" src="app/components/home/controller.js"></script>
+		<script type="text/javascript" src="app/components/detail/controller.js"></script>
+		<script type="text/javascript" src="app/shared/directives/directives.js"></script>
+		<!-- ./app -->
+		
+		<script src="//use.typekit.net/qzv1nno.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		
+		<!-- ./scripts -->
+	</head>
+
+	<body ng-app="kbase" class="kbase">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner container no-pad">
+				<div class="row" ng-controller="CollapseCtrl" class="ng-scope">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="http://us.blizzard.com/en-us/" class="navbar-brand">
+							<img src="b-res/images/logo.png" width="100%" />
+						</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse"  collapse="isCollapsed">
+						<ul class="nav navbar-nav">
+							<li class="nav-item games">
+								<a href="http://us.blizzard.com/en-us/games/" class="navgames"><span>GAMES</span></a>
+							</li>
+							<li class="nav-item company">
+								<a href="http://us.blizzard.com/en-us/company/" class="navcompany"><span>COMPANY</span></a>
+							</li>
+							<li class="nav-item careers">
+								<a href="http://us.blizzard.com/en-us/company/careers/" class="navcommunity"><span>CAREERS</span></a>
+							</li>
+							<li class="nav-item support">
+								<a href="http://us.battle.net/support/?locale=en_US" class="navsupport"><span>SUPPORT</span></a>
+							</li>
+							<li class="nav-item shop">
+								<a href="http://us.blizzard.com/store/index.xml?locale=en_US" class="navstore" id="shop-mainnav"><span>SHOP</span></a>
+							</li>
+						</ul>
+						<!--ul class="nav navbar-nav navbar-right">
+							<li class="nav-item login">
+								<!-- https://stackexchange.com/oauth?client_id=&scope=&redirect_uri& ->
+								<a href="#"><span>Login</span></a>
+							</li>
+						</ul-->
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</nav>
+		<h1 class="container-fluid no-pad">
+			<div class="row no-gutters">
+				<div class="col-xs-12"></div>
+			</div>
+		</h1>
+		<div class="kbase-content">
+			<div class="container no-pad">
+				<div class="row">
+					<div class="col-xs-12">
+						<h3>Inquerious</h3>
+					</div>
+				</div>
+				<!-- this is where the magic happens -->
+				<div class="row wrapper" ng-view></div>
+			</div>
+			
+			<div class="subpagenav container">
+				<div class="row top">
+					<h5 class="col-xs-12"><a href="http://us.blizzard.com/en-us/company/" class="section">Company</a></h5>
+				</div>
+				<div class="row middle no-gutters">
+					<div class="column1 columns col-xs-12 col-md-4">
+						<h5><a href="http://us.blizzard.com/en-us/company/about/" class="title">About Blizzard Entertainment</a></h5>
+						<ul class="row">
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/profile.html">Company Profile</a></li>
+							<!-- right -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/b20/">20 Year Anniversary</a><br>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/mission.html">Mission Statement</a></li>
+							<!-- right -->
+							<li><a href="http://us.blizzard.com/en-us/community/contests/">Contests</a><br>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/awards.html">Awards</a></li>
+							<!-- right -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/faq.html">Blizzard FAQ</a></li>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/service-awards.html">Service Awards</a></li>
+							<!-- right -->
+							<li><a href="http://us.blizzard.com/en-us/company/about/contact.html">Contact Us</a></li>
+						</ul>
+					</div>
+					<div class="column2 columns col-xs-12 col-md-4">
+						<h5><a href="http://us.blizzard.com/en-us/company/careers/directory.html" class="title">Career Opportunities</a></h5>
+						<ul>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/careers/directory.html">Search for Jobs</a></li>
+							<!-- right -->
+							<li><a href="http://us.blizzard.com/en-us/company/careers/university.html">University Relations</a></li>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/careers/form/support.html">Job Site Support</a></li>
+							<!-- right -->
+							<li><a href="http://www.parsintl.com/WEB/FORTUNE100BestCreditNotice2015.html" target="new_window">Fortune's 100 Best </a></li>
+							<!-- left -->
+							<li><a href="https://blizzard.taleo.net/careersection/2/profile.ftl">Candidate Profile</a></li>
+						</ul>
+					</div>
+					<div class="column3 columns col-xs-12 col-md-2">
+						<h5><a href="http://us.blizzard.com/en-us/company/events/" class="title">Events</a></h5>
+						<ul>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/events/index.html#blizzcon">BlizzCon</a></li>
+							<!-- left -->
+							<li><a href="http://us.blizzard.com/en-us/company/events/index.html#tournaments">eSports</a></li>
+						</ul>
+					</div>
+					<div class="column4 columns col-xs-12 col-md-2">
+						<h5><a href="http://blizzard.gamespress.com/" class="title">Press</a></h5>
+						<ul>
+							<!-- left -->
+							<li><a href="http://blizzard.gamespress.com/">Press Center</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom row no-gutters">
+					<div class="col-xs-12"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>		

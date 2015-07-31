@@ -1,0 +1,32 @@
+<div class="col-xs-12 col-md-8">
+	<div class="row entry no-gutters" ng-repeat="question in questions">
+		<p class="col-xs-6 user-id">Asked on: {{ question.askedon | date:'MM/dd/yyyy @ h:mma' }} by: {{question.userid}}</p>
+		<div class="col-xs-3 counts">
+			<div class="votes box-sm">
+				<p class="result">{{question.votes}}</p>
+				<p class="desc">votes</p>
+			</div>
+			<div class="answers box-sm">
+				<p class="result">{{question.answers}}</p>
+				<p class="desc">answers</p>
+			</div>
+			<div class="views box-sm">
+				<p class="result">{{question.views}}</p> 
+				<p class="desc">views</p>
+			</div>
+		</div>
+		<div class="col-xs-9 question">
+			<div class="row">
+				<p class="col-xs-12 question-text"><a href="#/question/{{question.questionid}}">{{question.asked}}</a></p>
+			</div>
+			<div class="row">
+				<p class="col-xs-6 tag">
+					<span ng-repeat="tag in question.tags track by $index">{{question.tag}}</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--div class="col-sm-12 col-md-4 wcloud">
+	This is where the word cloud goes
+</div-->
