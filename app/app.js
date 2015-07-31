@@ -10,5 +10,3 @@ angular.module('kbase').controller('CollapseCtrl', function ($scope) {
 		return $sce.trustAsHtml(text); 
 	};	
 }]); */
-
-});
