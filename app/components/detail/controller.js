@@ -22,7 +22,7 @@ angular.module('kbase')
 			console.log("there was an error"); 
 		});
 
-		$scope.$on('onRepeatLast', function(scope, element, attrs){
+		$scope.answers.$on('onRepeatLast', function(scope, element, attrs){
 			console.log("im done");
 		});
 	}
