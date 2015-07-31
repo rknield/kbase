@@ -16,13 +16,13 @@ angular.module('kbase').controller('AnswerCtrl', ['$scope','$routeParams','$http
 
 		$scope.$on('onRepeatLast', function(scope, element, attrs){
 			//console.log("im done");
-			/*$http.post('http://www.ft-wd.com/kbaseConn/kbase.php?r=uv&qid=' + questionid)
+			$http.post('http://www.ft-wd.com/kbaseConn/kbase.php?r=vc&qid=' + questionid)
 			.success(function(response){
 				console.log("view count successfully updated by 1 for question:" + questionid);
 			})
 			.error(function(data,status,headers,config){
 				console.log("there was an error - I couldn't update the view count."); 
-			});*/
+			});
 		});
 	}
 ]);  
