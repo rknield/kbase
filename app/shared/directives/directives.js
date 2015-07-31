@@ -1,5 +1,11 @@
-angular.module('kbase').filter('to_trusted', ['$sce', function($sce){
-	return function(text) {
-		return $sce.trustAsHtml(text); 
-	};	
-}]); 
+angular.module('kbase')
+	.directive('onLastRepeat', function() {
+	    return function(scope, element, attrs) {
+	        if (scope.$last) setTimeout(function(){
+	            scope.$emit('onRepeatLast', element, attrs);
+	        }, 1);
+	    };
+	})
+	.directive('updateView', function($http){
+		
+	})
