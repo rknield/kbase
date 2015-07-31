@@ -1,4 +1,11 @@
 angular.module('kbase')
+	/*.directive('onLastRepeat', function() {
+        return function(scope, element, attrs) {
+            if (scope.$last) setTimeout(function(){
+                scope.$emit('onRepeatLast', element, attrs);
+            }, 1);
+        };
+    })*/
 	.controller('AnswerCtrl', ['$scope','$routeParams','$http','$sce', function ($scope, $routeParams, $http, $sce) {
 		var questionid = $routeParams.questionID;
 	
@@ -15,9 +22,9 @@ angular.module('kbase')
 				console.log("there was an error"); 
 			});
 
-			$scope.$on('onLastRepeat', function(scope, element, attrs){
+			/*$scope.$on('onLastRepeat', function(scope, element, attrs){
 				console.log("im done");
-			});
+			});*/
 		
 	}
 ]);
