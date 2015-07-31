@@ -1,12 +1,4 @@
-angular.module('kbase')
-	.directive('onLastRepeat', function() {
-        return function(scope, element, attrs) {
-            if (scope.$last) setTimeout(function(){
-                scope.$emit('onRepeatLast', element, attrs);
-            }, 1);
-        };
-    })
-	.controller('AnswerCtrl', ['$scope','$routeParams','$http','$sce', function ($scope, $routeParams, $http, $sce) {
+angular.module('kbase').controller('AnswerCtrl', ['$scope','$routeParams','$http','$sce', function ($scope, $routeParams, $http, $sce) {
 		var questionid = $routeParams.questionID;
 	
 		$http.get('http://www.ft-wd.com/kbaseConn/kbase.php?r=qa&qid=' + questionid)
@@ -23,7 +15,14 @@ angular.module('kbase')
 		});
 
 		$scope.$on('onRepeatLast', function(scope, element, attrs){
-			console.log("im done");
+			//console.log("im done");
+			/*$http.post('http://www.ft-wd.com/kbaseConn/kbase.php?r=uv&qid=' + questionid)
+			.success(function(response){
+				console.log("view count successfully updated by 1 for question:" + questionid);
+			})
+			.error(function(data,status,headers,config){
+				console.log("there was an error - I couldn't update the view count."); 
+			});*/
 		});
 	}
 ]);  
