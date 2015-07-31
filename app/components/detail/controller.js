@@ -26,4 +26,4 @@ angular.module('kbase')
 			console.log("im done");
 		});
 	}
-]);
+]);  
